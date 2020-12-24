@@ -1,6 +1,6 @@
 #!/Users/wtraylor/usr/local/bin/bash
 
-export PYENV_VERSION=3.7.1
+export PYENV_VERSION=3.8.2
 #set version for pyenv to reference, if used
 
 #installed into a pyenv virtualenv (using pyenv managed python 3.7.1)
