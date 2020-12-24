@@ -8,6 +8,9 @@ export PYENV_VERSION=3.7.1
 #BORGMATIC=/Users/wtraylor/.pyenv/versions/borgmatic/bin/borgmatic
 BORGMATIC=/Users/wtraylor/usr/local/bin/borgmatic
 
+#wrapper script to get around full disk access restritions on macOS Catalina and later
+WRAPPER=/Users/wtraylor/.go/bin/go-bash-wrapper
+
 #from brew (cask)
 BORG=/Users/wtraylor/usr/local/bin/borg
 
@@ -20,9 +23,12 @@ if [ ! -f $BORGMATIC ]; then
 elif [ ! -f $BORG ]; then
     echo "Error: borg not found" 1>&2
     exit 1;
+elif [ ! -f $WRAPPER ]; then
+    echo "Error: go-bash-wrapper not found" 1>&2
+    exit 1;
 fi
 
-$BORGMATIC -v2
+$WRAPPER $BORGMATIC -v2
 BORGEXIT=$?
 if [ "$BORGEXIT" -ne 0 ]; then
     echo "Error: Borg Backup Failed" 1>&2
