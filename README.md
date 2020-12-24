@@ -1,11 +1,12 @@
 # Schedule automated backups on MacOS with Borg Backup
 
 Contains launchd definitions, execution and validation wrapper scripts, produces loggable output, and notifies on failure.
+Work around Full Disk Access limitations on Catalina and Big Sur with go-bash-wrapper
 
 ## To Install:
 
 * Install borgbackup and borgmatic via brew or pip and ensure executables are available in your search path.
-*Optionally install terminal-notifier if you want desktop notification on error.
+* Optionally install terminal-notifier if you want desktop notification on error.
 * Configure your borg repo if you have not already.
 * Configure borgmatic to your liking.
 * Ensure borgmatic executes successfully from command line.

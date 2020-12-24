@@ -1,14 +1,13 @@
 #!/Users/wtraylor/usr/local/bin/bash
 
 export PYENV_VERSION=3.7.1
-#don't use variable defined python version, in case it gets deleted
-#from system
+#set version for pyenv to reference, if used
 
 #installed into a pyenv virtualenv (using pyenv managed python 3.7.1)
 #BORGMATIC=/Users/wtraylor/.pyenv/versions/borgmatic/bin/borgmatic
 BORGMATIC=/Users/wtraylor/usr/local/bin/borgmatic
 
-#wrapper script to get around full disk access restritions on macOS Catalina and later
+#use wrapper script to get around full disk access restritions on macOS Catalina and later
 WRAPPER=/Users/wtraylor/.go/bin/go-bash-wrapper
 
 #from brew (cask)
