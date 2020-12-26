@@ -16,3 +16,4 @@ Work around Full Disk Access limitations on Catalina and Big Sur with go-bash-wr
 * Immediately execute service (to test) with "launchctl start <path to plist config file>"
 
 Consider using the app, "LaunchControl" for easily reviewing and modifying launchd service configuration.
+Or generate with http://launched.zerowidth.com/
